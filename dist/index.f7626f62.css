@@ -37,7 +37,7 @@ body {
                  / 1fr 2fr;
   max-width: 120rem;
   min-height: 117rem;
-  margin: 1vw auto;
+  margin: 4vw auto;
   display: grid;
   overflow: hidden;
   box-shadow: 0 2rem 6rem .5rem #61555133;
@@ -487,7 +487,7 @@ body {
 
 .search-results {
   flex-direction: column;
-  padding: 1.5rem 0;
+  padding: 3rem 0;
   display: flex;
 }
 
@@ -497,7 +497,7 @@ body {
 }
 
 .pagination {
-  margin-top: 3rem;
+  margin-top: auto;
   padding: 0 3.5rem;
 }
 
@@ -673,7 +673,7 @@ body {
 .recipe__directions {
   flex-direction: column;
   align-items: center;
-  padding: 2rem 10rem 5rem;
+  padding: 5rem 10rem;
   display: flex;
 }
 
