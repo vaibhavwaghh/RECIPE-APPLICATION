@@ -4,7 +4,7 @@ class PreviewView extends View {
   _parentElement = '';
   _generateMarkUp() {
     const idValue = window.location.hash.slice(1);
-    console.log(this._data);
+
     return `
     <li class="preview">
       <a class="preview__link  ${

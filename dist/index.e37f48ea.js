@@ -3287,7 +3287,6 @@ class PreviewView extends (0, _viewDefault.default) {
     _parentElement = "";
     _generateMarkUp() {
         const idValue = window.location.hash.slice(1);
-        console.log(this._data);
         return `
     <li class="preview">
       <a class="preview__link  ${this._data.id === idValue ? "preview__link--active" : ""}" href="#${this._data.id}">
