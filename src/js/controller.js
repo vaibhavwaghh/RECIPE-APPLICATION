@@ -104,7 +104,7 @@ const controlAddRecipe = async function (newRecipe) {
     addRecipeView.renderError();
     /**RENDER BOOKMARK VIEW */
     bookMarksView.render(model.state.bookmarks);
-    // // /**CHANGE ID IN URL */
+    /**CHANGE ID IN URL */
     window.history.pushState(null, '', `#${model.state.recipe.id}`);
   } catch (err) {
     console.log(err.message);

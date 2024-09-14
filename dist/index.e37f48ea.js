@@ -652,8 +652,7 @@ const controlAddRecipe = async function(newRecipe) {
         /**RENDER RECIPE ON RECIPEVIEW */ (0, _recipeViewJsDefault.default).render(_modelJs.state.recipe);
         /**ADD  SUCCESS MESSAGE */ (0, _addRecipeViewJsDefault.default).renderError();
         /**RENDER BOOKMARK VIEW */ (0, _bookMarksViewJsDefault.default).render(_modelJs.state.bookmarks);
-        // // /**CHANGE ID IN URL */
-        window.history.pushState(null, "", `#${_modelJs.state.recipe.id}`);
+        /**CHANGE ID IN URL */ window.history.pushState(null, "", `#${_modelJs.state.recipe.id}`);
     } catch (err) {
         console.log(err.message);
         (0, _addRecipeViewJsDefault.default).renderError(err.message);
@@ -2047,7 +2046,7 @@ const uploadRecipe = async function(newRecipe) {
             ingredients
         };
         const data = await (0, _helper.AJAX)(`${(0, _config.API_URL)}?key=${(0, _config.KEY)}`, recipe);
-        console.log(data);
+        console.log(data.data);
         state.recipe = createRecipeObject(data);
         addBookMark(state.recipe);
     } catch (err1) {
@@ -3368,6 +3367,7 @@ class AddRecipeView extends (0, _viewDefault.default) {
             const dataArr = [
                 ...new FormData(this)
             ];
+            console.log(new FormData(this));
             const data = Object.fromEntries(dataArr);
             handler(data);
         });

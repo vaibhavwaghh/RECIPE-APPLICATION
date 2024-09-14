@@ -29,6 +29,7 @@ class AddRecipeView extends View {
       const btn = e.target.closest('.upload__btn');
       if (!btn) return;
       const dataArr = [...new FormData(this)];
+      console.log(new FormData(this));
       const data = Object.fromEntries(dataArr);
       handler(data);
     });
